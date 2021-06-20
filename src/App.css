@@ -29,7 +29,7 @@ button.cancel {
   cursor: pointer;
   background-color: #F9A64D;
   height: 30px;
-  width: 100px;
+  width: 120px;
 }
 button.cancel:hover {
   background-color: #B15F06;
