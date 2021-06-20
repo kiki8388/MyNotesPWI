@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Note(props) {
 
   const [showContent, setShowContent] = useState(false);
+  const {t} = useTranslation();
 
   const toggleContent = () => {
     setShowContent(!showContent);
@@ -18,15 +20,15 @@ function Note(props) {
 
   return (
     <div className="note">
-      <p>Autor: {props.author}</p>
-      <p>Temat: {props.subject}</p>
-      <p1 onClick={toggleContent}>Pokaż/ukryj treść</p1>
+      <p>{t('author')} {props.author}</p>
+      <p>{t('subject')} {props.subject}</p>
+      <p1 onClick={toggleContent}>{t('show')}</p1>
       {showContent && (
-       <p> <div className="Contentription">Treść: {props.content}</div> </p>
+       <p> <div className="Contentription">{t('content')} {props.content}</div> </p>
       )}
       <div className="buttons">
-        <button onClick={editHandler} >Edytuj</button>
-        <button className="delete" onClick={() => props.onDelete(props.id)}>Usuń</button>
+        <button onClick={editHandler} >{t('edit')}</button>
+        <button className="delete" onClick={() => props.onDelete(props.id)}>{t('delete')}</button>
       </div>
     </div>
   );
