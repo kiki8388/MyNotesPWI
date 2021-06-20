@@ -147,21 +147,22 @@
   .editContainer {
     margin-left: 30px;
     margin-right: 30px;
+    margin-top: 50px;
   }
   .ReactModal__Content--after-open .note {
     width: 80%;
   }
   .ReactModal__Content--after-open {
-    height: 55%;
+    height: 65%;
   }
 }
 @media (max-width: 374px) {
   .ReactModal__Content--after-open {
-    height: 60%;
+    height: 70%;
   }
 }
 @media (max-width: 350px) {
   .ReactModal__Content--after-open {
-    height: 65%;
+    height: 75%;
   }
 }
