@@ -1,0 +1,151 @@
+  .note {
+    background-color: #FCD0A1;
+    border-radius: 6px;
+    padding: 12px 20px;
+    text-align: left;
+    margin: 10px; 
+    width: 85%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+  }
+  .description {
+    display: block;
+    color: #282c34;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .note p {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .note p1 {
+    cursor: pointer;
+    font-style: oblique;
+  }
+  
+  .note button {
+    margin: 2px;
+    background-color: #6B9B84;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+  }
+  .note button:hover {
+    background-color: #5B726D;
+  }
+  .note button.delete {
+    background-color: #7A2F48;
+  }
+  .note button.delete:hover {
+    background-color: #6D1A36;
+  }
+  .note button.add {
+    background-color: #594A52;
+  }
+  .note button.add:hover {
+    background-color: #43373D;
+  }
+  .addButtonLabel {
+    display: flex;
+    justify-content: center;
+  }
+  .saveButtonLabel {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.addNoteContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.addNoteContainer .note{
+  background-color: #53917E;
+  color: #fff;
+  margin: 0;
+}
+.mainNotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ReactModal__Content--after-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  background: #6D1A36;
+  border-radius: 25px;
+  min-height: 400px;
+}
+.ReactModal__Content--after-open .note {
+  background-color: #6D1A36;
+  color: #fff;
+}
+.editContainer {
+  background-color: #6D1A36;
+  margin-left: 230px;
+  margin-right: 230px;
+  margin-top: 110px;
+}
+@media (min-width: 801px) and (max-width: 1030px) {
+  .ReactModal__Content--after-open {
+    height: 30%;
+  }
+  .editContainer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .ReactModal__Content--after-open {
+    height: 40%;
+  }
+  .editContainer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 640px) {
+  .ReactModal__Content--after-open {
+    height: 50%;
+  }
+  .editContainer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .editContainer {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .ReactModal__Content--after-open .note {
+    width: 80%;
+  }
+  .ReactModal__Content--after-open {
+    height: 55%;
+  }
+}
+@media (max-width: 374px) {
+  .ReactModal__Content--after-open {
+    height: 60%;
+  }
+}
+@media (max-width: 350px) {
+  .ReactModal__Content--after-open {
+    height: 65%;
+  }
+}
