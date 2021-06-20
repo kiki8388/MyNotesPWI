@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function EditNote(props) {
 
   const [author, setAuthor] = useState('');
   const [subject, setSubject] = useState('');
   const [content, setContent] = useState('');
+  const {t} = useTranslation();
 
   const changeAuthorHandler = event => {
     const value = event.target.value;
@@ -30,15 +32,15 @@ export default function EditNote(props) {
   
   return (
     <div className="note">
-      <label>Wypełnij wszystkie pola, aby edycja się powiodła!</label><br></br><br></br>
-      <label>Autor:</label>
-        <input type="text" value={author} onChange={changeAuthorHandler} placeholder="Wprowadź nowe imię" />
-        <label>Tytuł:</label>
-        <input type="text" value={subject} onChange={changeSubjectHandler} placeholder="Wprowadź nowy temat notatki" />
-        <label>Treść:</label>
-        <input type="text" value={content} onChange={changeContentHandler} placeholder="Wprowadź nową treść notatki" />
+      <label>{t('mess')}</label><br></br><br></br>
+      <label>{t('author')}</label>
+        <input type="text" value={author} onChange={changeAuthorHandler} placeholder={t('enterName')} />
+        <label>{t('subject')}</label>
+        <input type="text" value={subject} onChange={changeSubjectHandler} placeholder={t('enterSubject')} />
+        <label>{t('content')}</label>
+        <input type="text" value={content} onChange={changeContentHandler} placeholder={t('enterContent')} />
       <div className="saveButtonLabel">
-        <button onClick={() => editNote()}>Zapisz</button>
+        <button className="save" onClick={() => editNote()}>{t('save')}</button>
       </div>
     </div>
   );
