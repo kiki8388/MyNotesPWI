@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import axios from '../../axios';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
+import i18next from 'i18next';
 
 class Notes extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class Notes extends React.Component {
       notes.push(newNote);
       this.setState({ notes });
     } catch (err) {
-      NotificationManager.error("Musisz wypełnić wszystkie pola/You must fill all the fields");
+      NotificationManager.error("Musisz wypełnić wszystkie pola!/You must fill all the fields!");
     }
   }
 
@@ -84,6 +85,11 @@ class Notes extends React.Component {
         <span style={{color:'#FF00DA'}}>s</span>
       </div>
 
+      <div className="languages">
+        <button className="pl" onClick={() => i18next.changeLanguage('pl')}></button>
+        <button className="en" onClick={() => i18next.changeLanguage('en')}></button>
+      </div>
+
       <NewNote
         onAdd={(note) => this.addNote(note)} />
 
@@ -97,7 +103,7 @@ class Notes extends React.Component {
               id={this.state.editNote._id}
               onEdit={note => this.editNote(note)} />
               <div className="cancelButtonLabel">
-                <button className="cancel" onClick={() => this.toggleModal()}>Anuluj</button>
+                <button className="cancel" onClick={() => this.toggleModal()}>Cancel/Anuluj</button>
               </div>
       </Modal>
 
