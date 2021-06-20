@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function NewNote(props) {
 
@@ -6,6 +7,7 @@ function NewNote(props) {
   const [author, setAuthor] = useState('');
   const [subject, setSubject] = useState('');
   const [content, setContent] = useState('');
+  const {t} = useTranslation();
 
   const changeAuthorHandler = event => {
     const value = event.target.value;
@@ -37,19 +39,19 @@ function NewNote(props) {
     showForm ? (
       <div className="addNoteContainer">
         <div className="note">
-          <label>Autor:</label>
-          <input type="text" value={author} onChange={changeAuthorHandler} placeholder="Wprowadź swoje imię"/>
-          <label>Tytuł:</label>
-          <input type="text" value={subject} onChange={changeSubjectHandler} placeholder="Wprowadź temat notatki"/>
-          <label>Treść:</label>
-          <input type="text" value={content} onChange={changeContentHandler} placeholder="Wprowadź treść notatki"/>
+          <label>{t('author')}</label>
+          <input type="text" value={author} onChange={changeAuthorHandler} placeholder={t('enterName')}/>
+          <label>{t('subject')}</label>
+          <input type="text" value={subject} onChange={changeSubjectHandler} placeholder={t('enterSubject')}/>
+          <label>{t('content')}</label>
+          <input type="text" value={content} onChange={changeContentHandler} placeholder={t('enterContent')}/>
           <div className="addButtonLabel">
-            <button className="add" onClick={() => addNote()}>Dodaj notatkę</button>
+            <button className="add" onClick={() => addNote()}>{t('add')}</button>
           </div>
         </div>
       </div>
     ) : (
-      <button className="newNoteButton" onClick={() => setShowForm(true)}>Stwórz nową notatkę</button>
+      <button className="newNoteButton" onClick={() => setShowForm(true)}>{t('newNote')}</button>
     )
   );
 }
