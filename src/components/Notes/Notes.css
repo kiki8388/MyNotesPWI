@@ -69,17 +69,28 @@
   margin-bottom: 10px;
 }
 .languages {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 .pl {
-  width: 40px;
-  height: 20px;
-  background: url('pol.jpg') ;
+  /* width: 40px;
+  height: 20px; */
+  /* background: url('pol.jpg') ; */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
 }
 .en {
-  width: 40px;
-  height: 20px;
-  background: url('eng.png') ;
+  /* width: 40px;
+  height: 20px; */
+  /* background: url('eng.png') ; */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
 }
 .addNoteContainer {
   width: 100%;
@@ -101,10 +112,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40%;
+  height: 45%;
   background: #6D1A36;
   border-radius: 25px;
-  min-height: 400px;
+  min-height: 440px;
+  max-height: 440px;
 }
 .ReactModal__Content--after-open .note {
   background-color: #6D1A36;
@@ -118,7 +130,7 @@
 }
 @media (min-width: 801px) and (max-width: 1030px) {
   .ReactModal__Content--after-open {
-    height: 30%;
+    height: 32%;
   }
   .editContainer {
     margin-left: 30px;
@@ -127,7 +139,7 @@
 }
 @media (max-width: 800px) {
   .ReactModal__Content--after-open {
-    height: 40%;
+    height: 42%;
   }
   .editContainer {
     margin-left: 30px;
@@ -136,7 +148,7 @@
 }
 @media (max-width: 640px) {
   .ReactModal__Content--after-open {
-    height: 50%;
+    height: 55%;
   }
   .editContainer {
     margin-left: 30px;
@@ -153,7 +165,7 @@
     width: 80%;
   }
   .ReactModal__Content--after-open {
-    height: 65%;
+    height: 68%;
   }
 }
 @media (max-width: 374px) {
@@ -163,6 +175,6 @@
 }
 @media (max-width: 350px) {
   .ReactModal__Content--after-open {
-    height: 75%;
+    height: 80%;
   }
 }

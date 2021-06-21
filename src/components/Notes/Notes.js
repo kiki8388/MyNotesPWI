@@ -86,8 +86,8 @@ class Notes extends React.Component {
       </div>
 
       <div className="languages">
-        <button className="pl" onClick={() => i18next.changeLanguage('pl')}></button>
-        <button className="en" onClick={() => i18next.changeLanguage('en')}></button>
+        <button className="pl" onClick={() => i18next.changeLanguage('pl')}><img src="https://img.icons8.com/office/80/000000/poland.png"/></button>
+        <button className="en" onClick={() => i18next.changeLanguage('en')}><img src="https://img.icons8.com/plasticine/100/000000/great-britain.png"/></button>
       </div>
 
       <NewNote
@@ -103,7 +103,7 @@ class Notes extends React.Component {
               id={this.state.editNote._id}
               onEdit={note => this.editNote(note)} />
               <div className="cancelButtonLabel">
-                <button className="cancel" onClick={() => this.toggleModal()}>Cancel/Anuluj</button>
+                <button className="cancel" onClick={() => this.toggleModal()}><img src="https://img.icons8.com/ios-filled/50/000000/cancel.png"/></button>
               </div>
       </Modal>
 
