@@ -21,18 +21,10 @@ background-size: cover;
   margin: 10px;
 }
 button.cancel {
-  margin: 2px;
-  color: #fff;
-  border: 0;
-  border-radius: 4px;
-  padding: 4px 8px;
   cursor: pointer;
-  background-color: #F9A64D;
-  height: 30px;
-  width: 120px;
-}
-button.cancel:hover {
-  background-color: #B15F06;
+  background: none;
+  border: none;
+  margin-top: 0;
 }
 .cancelButtonLabel {
   display: flex;
